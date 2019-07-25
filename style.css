@@ -1,0 +1,244 @@
+/* GENERAL */
+
+*{
+    padding:0;
+    margin:0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+} 
+
+/* HEADER */
+
+header{
+    background-color: rgb(39, 118, 182);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0, 0.6);
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0, 0.6);
+    height:6rem;
+}
+
+h1{
+    display: inline-block;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+/* LIST SECTION */
+
+#list-section{
+    padding: 1rem;
+}
+
+
+#no-tasks-msg{
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 50%;
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.task-items{
+    margin-top:1rem;
+    list-style: none;
+    display:-ms-grid;
+    display:grid;
+    grid-template-rows: repeat(auto-fill, 4rem);
+    justify-items: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+}
+
+.task-item{
+    width:100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr auto;
+    grid-template-columns: 1fr auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+
+}
+
+.task-item-title{
+    font-weight: 500;
+    font-size:1.1rem;
+    cursor: pointer;
+}
+
+/* CREATE TASK SECTION */
+
+#new-task-section{
+    display:none;
+    padding:1rem;
+}
+
+#new-task-inputs{
+    display: -ms-grid;
+    display: grid;
+
+}
+.new-task-input-and-label label{
+    font-size:0.8rem;
+    font-weight:300;
+}
+
+.new-task-input-and-label input{
+    margin-top: 0.5rem;
+    font-family: inherit;
+    font-size:1.2rem;
+    font-weight:300;
+    border:none;
+    border-bottom: 1px solid #eee;
+    padding-bottom:0.2rem;
+}
+
+.new-task-input-and-label > * {
+    width:100%;
+}
+
+/* VIEW TASK SECTION */
+
+#view-task-section{
+    display:none;
+}
+
+#task-overview{
+    text-align: center;
+    height:100%;
+    width:100%;
+    display:-ms-grid;
+    display:grid;
+    -ms-grid-rows: 4rem 4rem 4rem;
+    grid-template-rows: 4rem 4rem 4rem;
+    -ms-flex-line-pack: center;
+        align-content: center;
+}
+
+.task-overview-title{
+    font-weight:500;
+    padding: 1rem 0.5rem;
+    border-bottom: 2px solid #999;
+}
+
+.task-overview-description{
+    font-weight: 300;
+    font-style: italic;
+}
+
+.task-overview-due{
+    font-size: 1.4rem;
+    font-weight:600;
+}
+
+/* CONTROLS */
+
+button{
+    font-family: inherit;
+    height:4rem;
+    width:100%;
+    border: none;
+    font-size:1.4rem;
+    font-weight: 300;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-light{
+    color: #333;
+    background-color: #eee;
+}
+
+.button-blue{
+    background-color: rgb(39, 118, 182);
+    color: #fff;
+
+}
+
+/* ICON */
+
+.arrow, .x{
+    width:35px;
+    cursor: pointer;
+}
+
+.x{
+    width:30px;
+}
+
+/* GRID STYLING */
+
+.grid-main-interface{
+    height:100vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.grid-list-interface{
+    height:100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr auto;
+    grid-template-rows: 1fr auto;
+}
+
+.grid-center-space{
+    height:100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    padding:1rem;
+}
+
+.grid-center{
+    display:-ms-grid;
+    display:grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.grid-1fr-1fr{
+    -ms-grid-columns: 1fr 1rem 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+}
+
+.grid-new-task-rows{
+    margin-top:1rem;
+    height:100%;
+    display:-ms-grid;
+    display:grid;
+    grid-template-rows: repeat(3, 5rem);
+
+}  
+
+/* Popup message */
+
+.popup-message{
+    font-size: 1.2rem;
+    position: absolute;
+    width:100%;
+    text-align: center;
+    bottom:20%;
+}

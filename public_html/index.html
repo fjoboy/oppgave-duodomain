@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gjøremål</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    
+    <!-- Open Sans google font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,600&display=swap" rel="stylesheet">  
+
+    <!-- CSS animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+</head>
+<body class="grid-main-interface">
+    <header class="grid-center">
+        <h1>Gjøremål</h1>
+    </header>
+    <section id="list-section" class="grid-list-interface animated fadeIn">
+        <ul id="task-items" class="task-items">
+            <span id="no-tasks-msg">Ingen gjøremål lagret...</span>
+        </ul>
+        <section class="controls grid-center">
+            <button class="button-blue" id="create-task-btn" onclick='displayNewTaskSection()'>Opprett ny</button>
+        </section>
+    </section> 
+    <section id="new-task-section" class="grid-center-space animated fadeIn">
+        <img class="arrow" alt="arrow" src="./icons/arrow-left.svg" onclick='displayListSection()'>
+        <section id="new-task-inputs" class="grid-new-task-rows">
+            <div class="new-task-input-and-label">
+                <label for="new-task-title">Tittel</label>
+                <input type="text" id="new-task-title" name="new-task-title" placeholder="Ingen tittel valgt...">
+            </div>
+            <div class="new-task-input-and-label">
+                <label for="new-task-description">Beskrivelse</label>
+                <input type="text" id="new-task-description" name="new-task-description" placeholder="Ingen beskrivelse valgt...">
+            </div>
+            <div class="new-task-input-and-label">
+                <label for="new-task-due">Frist</label>
+                <input type="text" id="new-task-due" name="new-task-due" placeholder="Ingen frist oppgitt...">
+            </div>    
+        </section>
+        <section class="controls grid-center grid-1fr-1fr">
+            <button class="button-light" onclick='displayListSection()'>Avbryt</button>
+            <button class="button-blue" onclick='createTask()'>Opprett ny</button>
+        </section>   
+    </section>
+    <section id="view-task-section" class="grid-center-space animated fadeIn">
+        <img class="arrow" alt="arrow" src="./icons/arrow-left.svg" onclick='displayListSection()'>
+        <section id="task-overview" class="grid-center">
+        </section>
+        <section class="controls grid-center grid-1fr-1fr">
+            <button class="button-light" onclick='displayListSection()'>Avbryt</button>
+            <button class="button-blue" id="task-complete-btn">Fullfør</button>
+        </section>   
+    </section>
+</body> 
+</html>
